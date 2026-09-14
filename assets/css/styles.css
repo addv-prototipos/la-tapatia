@@ -154,7 +154,7 @@ button{font-family:inherit;}
   box-shadow:0 10px 30px -18px rgba(0,0,0,.5);
 }
 .brand{display:flex; align-items:center; gap:.6em; text-decoration:none; color:var(--blanco); font-family:var(--font-display); font-weight:700; letter-spacing:.02em;}
-.brand-mark{width:26px;height:26px;flex:none;}
+.brand-mark{width:26px;height:26px;flex:none;border-radius:6px;object-fit:cover;}
 .topnav-links{display:flex; gap:26px; list-style:none; margin:0; padding:0; font-size:.86rem;}
 .topnav-links a{text-decoration:none; color:#cfe0f5; transition:color .25s;}
 .topnav-links a:hover{color:var(--azul-electrico);}
@@ -208,8 +208,14 @@ button{font-family:inherit;}
   color:#fff;
   background:radial-gradient(1200px 700px at 78% 18%, #0b3d78 0%, var(--azul-carbon) 55%), var(--azul-carbon);
 }
-.hero canvas{position:absolute; inset:0; width:100%; height:100%; opacity:.55;}
-.hero .slide-inner{position:relative; z-index:2;}
+.hero-photo{position:absolute; inset:0; z-index:0;}
+.hero-photo img{width:100%; height:100%; object-fit:cover; object-position:center 40%;}
+.hero-overlay{
+  position:absolute; inset:0; z-index:1;
+  background:radial-gradient(1200px 700px at 78% 18%, rgba(11,61,120,.82) 0%, rgba(3,10,20,.93) 55%), rgba(3,10,20,.5);
+}
+.hero canvas{position:absolute; inset:0; width:100%; height:100%; opacity:.55; z-index:2;}
+.hero .slide-inner{position:relative; z-index:3;}
 .hero-tag{
   display:inline-block;
   font-size:.8rem;
@@ -312,23 +318,6 @@ button{font-family:inherit;}
   box-shadow:var(--shadow-card);
 }
 .mock img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;}
-.mock .ph-bg{
-  position:absolute; inset:0;
-  background:
-    radial-gradient(120% 90% at 20% 0%, rgba(5,219,242,.35), transparent 55%),
-    linear-gradient(160deg, #0B1320, #03285B 75%);
-}
-.mock .ph-bg::after{
-  content:'';
-  position:absolute; inset:0;
-  background-image:repeating-linear-gradient(135deg, rgba(255,255,255,.04) 0 2px, transparent 2px 26px);
-}
-.mock .ph-label{
-  position:absolute; top:14px; left:14px; right:14px;
-  font-size:.68rem; letter-spacing:.04em; color:rgba(255,255,255,.55);
-  border:1px dashed rgba(255,255,255,.3);
-  border-radius:8px; padding:.5em .7em;
-}
 .mock .cap{
   position:relative; z-index:2; padding:1.1em 1.2em 1.2em;
   background:linear-gradient(0deg, rgba(3,10,20,.92), rgba(3,10,20,0));
