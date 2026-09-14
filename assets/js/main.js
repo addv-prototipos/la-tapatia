@@ -3,7 +3,7 @@
   "use strict";
 
   /* ---------- Config rápida (edita aquí) ---------- */
-  var WHATSAPP_NUMBER = "5214431234567"; // TODO: reemplazar por el número real de ADDV con lada país (52 + 10 dígitos)
+  var WHATSAPP_NUMBER = "523339567559";
   var NEGOCIO_NOMBRE  = "tu negocio de tortas y tacos ahogados";
 
   function waLink(mensaje){
